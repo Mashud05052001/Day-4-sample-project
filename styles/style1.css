@@ -1,0 +1,239 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* global-color */
+:root {
+    --blue: #562EFF;
+    --ash: #D1D1D1;
+    --orange: #ED6B4F;
+    --golden: #FFC014;
+    --pinkish: #FFE4E8;
+    --red: #FF4A60;
+}
+
+/* Common/utility/base style */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
+    ;
+}
+
+.container {
+    width: 55vw;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.flex-align {
+    display: flex;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.ash {
+    color: var(--ash);
+}
+
+/* Headinh */
+header {
+    background-color: var(--blue);
+    width: 100vw;
+}
+
+.head {
+    height: 10vh;
+    width: 55vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1.4px;
+}
+
+.head-part h2 {
+    color: #fff;
+}
+
+.head-part>img {
+    height: 50px;
+    width: 40px;
+    margin-right: 16px;
+
+}
+
+.head-part li {
+    list-style: none;
+    transition: .1s ease-in;
+}
+
+.head-part a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.head-part li:hover {
+    transform: scale(1.1);
+}
+
+.head-part ul li {
+    padding: 0px 10px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.head-part ul li img {
+    margin-top: 5px;
+}
+
+
+
+/* Top-Players */
+.top-players,
+.top-blogs {
+    padding: 30px;
+}
+
+.top-players>h2,
+.head-title,
+.last-part h2 {
+    margin-bottom: 42px;
+    color: var(--blue);
+
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 0px;
+
+}
+
+.player {
+    display: flex;
+    align-items: center;
+}
+
+.player>img {
+    width: 56px;
+    height: 56px;
+    margin-right: 16px;
+}
+
+/* hr */
+.container>hr {
+    width: 50vw;
+    padding-right: 2vw;
+    margin: 0 auto;
+    color: var(--ash);
+    opacity: 70%;
+}
+
+/* Top Blogs */
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.blog {
+    display: flex;
+}
+
+
+.blog>img {
+    width: 177px;
+    height: 117px;
+    margin-right: 16px;
+}
+
+.blog h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 35px;
+    margin-bottom: 5px;
+}
+
+.blog .p {
+    font-weight: 400;
+}
+
+.blog .sp-opa {
+    opacity: 50%;
+}
+
+/* Latest Courses */
+.last-part {
+    margin: 25px 33px;
+}
+
+.last-part h2 {
+    margin: 0px -4px 25px;
+}
+
+.last-part .courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+}
+
+.course img {
+    width: 100%;
+    margin-bottom: 5px;
+
+}
+
+.course p {
+    line-height: 35px;
+    opacity: 70%;
+    color: var(--orange);
+}
+
+.course>.flex {
+    margin-top: 30px;
+}
+
+.course .times {
+    background-color: var(--pinkish);
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+
+.course .ratings {
+    margin: 0px 10px 0px 5px;
+}
+
+.times .fa-regular {
+    color: var(--red);
+    padding: 0px 5px 0px 0px;
+
+}
+
+.times>.time {
+    color: var(--red);
+}
+
+.fa-star {
+    color: var(--golden);
+    margin-left: -7px;
+}
