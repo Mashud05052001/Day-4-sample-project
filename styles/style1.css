@@ -182,8 +182,8 @@ header {
 
 
 .blog>img {
-    width: 177px;
-    height: 117px;
+    width: 50%;
+    height: 100%;
     margin-right: 16px;
 }
 
@@ -280,10 +280,11 @@ footer {
     background-color: black;
     color: white;
     margin-top: 60px;
-    height: 8vw;
+
     letter-spacing: 1.5px;
     font-family: cursive;
     line-height: 35px;
+    /* padding: 25px 0px; */
 
 
 }
@@ -298,7 +299,39 @@ footer {
 /* -----------------------
             Responsive
 -------------------------- */
-/* mini phone */
+@media only screen and (max-width: 1280px) {
+    .head {
+        width: 80vw;
+    }
+
+    .container {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width:1080px) {
+    .head {
+        width: 90vw;
+    }
+
+    .container {
+        width: 90vw;
+    }
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogs img {
+        width: 40%;
+        height: 100%;
+        margin-right: 5px;
+    }
+
+
+}
+
+/*---------------------------------------- mini phone------------------------------------ */
 @media only screen and (max-width:688px) {
     header .head {
         width: 100vw;
@@ -317,12 +350,12 @@ footer {
     }
 
     .head .menu i {
-        margin-top: 18px;
+        margin-top: 12px;
     }
 
     .menu img {
         position: absolute;
-        top: 23px;
+        top: 31px;
         right: 55px;
 
     }
@@ -367,7 +400,7 @@ footer {
         display: block;
         position: absolute;
         right: 0px;
-        top: 28px;
+        top: 38px;
     }
 
 
@@ -428,8 +461,8 @@ footer {
 
     .player h3,
     .blog h3 {
-        font-size: 0.9rem;
-        font-weight: 400;
+        font-size: 1.1rem;
+        font-weight: 800;
         margin-right: -33px;
         padding-bottom: 5px;
     }
@@ -445,7 +478,7 @@ footer {
     }
 
     .blog h3 {
-        line-height: 0;
+        line-height: 25px;
         margin-top: 20px;
     }
 
@@ -457,7 +490,9 @@ footer {
     }
 
     .footer {
-        padding: 30px 0px;
+
+        line-height: 20px;
+
     }
 
 }
