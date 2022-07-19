@@ -7,7 +7,7 @@
     --ash: #D1D1D1;
     --orange: #ED6B4F;
     --golden: #FFC014;
-    --pinkish: #FFE4E8;
+    --pinkish: #ffbbc5;
     --red: #FF4A60;
 }
 
@@ -17,21 +17,48 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F3F1FF;
+    background-color: #dedde7;
     ;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     width: 55vw;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-top: 35px;
+
     display: flex;
     justify-content: center;
     flex-direction: column;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
+}
+
+.section-title {
+
+    margin-bottom: 42px;
+    color: var(--blue);
+
+
+}
+
+hr {
+    width: 50vw;
+    padding-right: 2vw;
+    margin: 0 auto;
+    color: var(--ash);
+    opacity: 70%;
 }
 
 .flex-align {
@@ -48,15 +75,13 @@ body {
     display: flex;
 }
 
-.blue {
-    color: var(--blue);
-}
 
-.ash {
-    color: var(--ash);
-}
 
-/* Headinh */
+
+
+/*-------------------------------------
+                Heading
+-------------------------------------- */
 header {
     background-color: var(--blue);
     width: 100vw;
@@ -69,6 +94,10 @@ header {
     display: flex;
     justify-content: space-between;
     letter-spacing: 1.4px;
+}
+
+.head .menu {
+    display: none;
 }
 
 .head-part h2 {
@@ -108,19 +137,15 @@ header {
 
 
 
-/* Top-Players */
+/*----------------------------------- 
+              Top-Players
+------------------------------------- */
 .top-players,
 .top-blogs {
     padding: 30px;
 }
 
-.top-players>h2,
-.head-title,
-.last-part h2 {
-    margin-bottom: 42px;
-    color: var(--blue);
 
-}
 
 .players {
     display: grid;
@@ -140,16 +165,11 @@ header {
     margin-right: 16px;
 }
 
-/* hr */
-.container>hr {
-    width: 50vw;
-    padding-right: 2vw;
-    margin: 0 auto;
-    color: var(--ash);
-    opacity: 70%;
-}
 
-/* Top Blogs */
+
+/*---------------------------------
+            Top Blogs
+-----------------------------------*/
 .blogs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -174,13 +194,19 @@ header {
     margin-bottom: 5px;
 }
 
-.blog .p {
-    font-weight: 400;
-}
 
-.blog .sp-opa {
+
+.blog .opa5 {
+    font-weight: 400;
     opacity: 50%;
 }
+
+.blog a {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--blue);
+}
+
 
 /* Latest Courses */
 .last-part {
@@ -191,7 +217,7 @@ header {
     margin: 0px -4px 25px;
 }
 
-.last-part .courses {
+.courses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
@@ -210,17 +236,22 @@ header {
 }
 
 .course>.flex {
-    margin-top: 30px;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .course .times {
     background-color: var(--pinkish);
     padding: 0px 5px;
     border-radius: 10px;
+
 }
 
 .course .ratings {
     margin: 0px 10px 0px 5px;
+    opacity: 50%;
 }
 
 .times .fa-regular {
@@ -235,5 +266,198 @@ header {
 
 .fa-star {
     color: var(--golden);
-    margin-left: -7px;
+    width: 13px;
+}
+
+/* ---------------------------------
+                footer
+------------------------------------ */
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    margin-top: 60px;
+    height: 8vw;
+    letter-spacing: 1.5px;
+    font-family: cursive;
+    line-height: 35px;
+
+
+}
+
+
+
+.footer a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+/* -----------------------
+            Responsive
+-------------------------- */
+/* mini phone */
+@media only screen and (max-width:688px) {
+    header .head {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .head ul {
+        display: none;
+    }
+
+    .head img {
+        margin: 0px 15px 0px 15px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .head .menu i {
+        margin-top: 18px;
+    }
+
+    .menu img {
+        position: absolute;
+        top: 23px;
+        right: 55px;
+
+    }
+
+    .head .menu {
+        display: block;
+        font-size: 25px;
+        color: white;
+        margin-right: 30px;
+    }
+
+    .head .menu {
+        transition: .5s linear;
+        cursor: pointer;
+
+    }
+
+    .head .menu ul li {
+        transition: .5s linear;
+
+
+        padding: 10px 20px;
+
+
+    }
+
+    .head .menu ul {
+        transition: .5s linear;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(133, 132, 132, 0.748));
+        border-radius: 20px;
+    }
+
+    .head .menu ul a {
+        color: rgb(255, 255, 255);
+        font-weight: 1000;
+        letter-spacing: 3px;
+        padding: 5px 10px;
+
+    }
+
+    .head .menu:hover ul {
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 28px;
+    }
+
+
+    .head .menu ul a:hover {
+        color: var(--blue);
+        font-size: 13px;
+    }
+
+
+
+    .menu ul {
+        margin-top: 20px;
+    }
+
+    .menu ul li {
+        list-style: none;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        font-size: 10px;
+        color: white;
+    }
+
+    .head h2 {
+        font-size: 2.2em;
+    }
+
+
+
+
+    .container {
+        width: 90%;
+        /* padding: 30px 30px 30px 15px; */
+        border: none;
+    }
+
+
+    .top-players {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 30px 30px 15px;
+    }
+
+    .top-players h2 {
+        padding-left: 15px;
+
+    }
+
+
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player h3,
+    .blog h3 {
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin-right: -33px;
+        padding-bottom: 5px;
+    }
+
+    .blog {
+        flex-direction: column;
+    }
+
+
+    .blog img {
+        width: 100%;
+        height: 60%;
+    }
+
+    .blog h3 {
+        line-height: 0;
+        margin-top: 20px;
+    }
+
+    footer {
+        height: auto;
+        letter-spacing: 0;
+        font-size: 0.7em;
+        line-height: 15px;
+    }
+
+    .footer {
+        padding: 30px 0px;
+    }
+
 }
